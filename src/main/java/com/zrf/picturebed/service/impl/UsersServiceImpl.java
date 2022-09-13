@@ -29,10 +29,19 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public int insert() {
-        Users newUsers = new Users(2, "linin", Sex.MAN, "2323346772");
-        if(usersDAO.existsById(2)){
+        Users newUsers = new Users(1, "linin", Sex.MAN, "2323346772");
+        if(usersDAO.existsById(1)){
             return 0;
         }
         return usersDAO.insert(newUsers).getId();
+    }
+
+    @Override
+    public int register(Users newUser) {
+        if(usersDAO.existsByName(newUser.getName())){
+            return 0;
+        }
+        usersDAO.insert(newUser);
+        return newUser.getId();
     }
 }

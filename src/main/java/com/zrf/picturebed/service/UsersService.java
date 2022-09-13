@@ -8,4 +8,6 @@ public interface UsersService {
     Users getUserById(int id);
 
     int insert();
+
+    int register(Users newUser);
 }

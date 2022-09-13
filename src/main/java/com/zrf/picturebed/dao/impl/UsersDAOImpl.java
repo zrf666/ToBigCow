@@ -31,6 +31,11 @@ public class UsersDAOImpl implements UsersDAO {
         return usersRepository.existsById(id);
     }
 
+    @Override
+    public boolean existsByName(String name) {
+        return usersRepository.existsByName(name);
+    }
+
     /**
      * 增加用户
      * @return

@@ -4,10 +4,10 @@ import com.zrf.picturebed.utils.Sex;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Value;
+import org.springframework.lang.Nullable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * @author fafa
@@ -23,6 +23,7 @@ public class Users {
 
     private String name;
 
+    @Enumerated(EnumType.ORDINAL)
     private Sex sex;
 
     private String phone;

@@ -3,8 +3,8 @@ package com.zrf.picturebed.utils;
 import lombok.Data;
 
 public enum Sex {
-    MAN("男"),
-    WOMAN("女");
+    MAN("man"),
+    WOMAN("woman");
 
     private String value;
 

@@ -24,6 +24,13 @@ public interface UsersDAO {
     boolean existsById(int id);
 
     /**
+     * 根据名字判断用户是否存在
+     * @param name
+     * @return
+     */
+    boolean existsByName(String name);
+
+    /**
      * 插入用户
      * @param users
      * @return
